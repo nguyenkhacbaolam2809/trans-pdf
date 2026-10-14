@@ -1,0 +1,18 @@
+# trans-pdf Backend Dependencies
+# High-performance, low-level PDF layout-preserving translation
+
+fastapi>=0.110.0
+uvicorn[standard]>=0.28.0
+python-multipart>=0.0.9
+pymupdf>=1.24.0
+httpx>=0.27.0
+pydantic>=2.6.0
+python-dotenv>=1.0.1
+google-genai>=0.1.1
+openai>=1.14.0
+requests>=2.31.0
+# FIX P1: WebSocket real-time (uvicorn[standard] đã gồm, khai báo rõ để deploy thiếu extras không vỡ).
+websockets>=12.0
+# FIX P1/P2: OCR hybrid + ảnh pixmap (optional — thiếu vẫn chạy, OCR tự graceful-off).
+Pillow>=10.0.0
+pytesseract>=0.3.10
